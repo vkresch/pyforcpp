@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.0)
+project(wrapper)
+add_subdirectory(pybind11)
+add_executable(wrapper main.cpp)
+target_link_libraries(wrapper pybind11::embed)

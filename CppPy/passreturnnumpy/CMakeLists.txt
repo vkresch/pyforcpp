@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+project(numpytest)
+add_subdirectory(pybind11)
+file(COPY numpyfuncs.py DESTINATION .)
+add_executable(numpytest main.cpp)
+target_link_libraries(numpytest pybind11::embed)

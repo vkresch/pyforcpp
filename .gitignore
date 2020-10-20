@@ -1,0 +1,7 @@
+.vscode/
+build/
+pybind11/
+omp/
+libdivide/
+Test/
+vpython/

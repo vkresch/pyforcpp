@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)
+project(OMPEval)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+add_subdirectory( pybind11 )
+set(SOURCE_FILES ompeval.cpp omp/CardRange.cpp omp/CardRange.h omp/CombinedRange.cpp omp/CombinedRange.h omp/Constants.h omp/EquityCalculator.cpp omp/EquityCalculator.h omp/Hand.h omp/HandEvaluator.cpp omp/HandEvaluator.h omp/Random.h omp/Util.h libdivide/libdivide.h)
+pybind11_add_module(ompeval ${SOURCE_FILES})
