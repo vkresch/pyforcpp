@@ -1,3 +1,7 @@
+# Files
+main
+
+# Folders
 .vscode/
 build/
 pybind11/
