@@ -15,25 +15,17 @@ auto mean_manual(const std::vector<int>& seq){
     auto n = 0.0;
     for(auto x: seq)
         n += x;
-    return n/seq.size();
+    return n/seq.size(); // Copy return
 }
 
 // ####################################################################################
 // Call by value/reference
-auto mean_value(const std::vector<int> seq){
-    // Two copies
-    auto n = 0.0;
-    for(auto x: seq)
-        n += x;
-    return n/seq.size();
+auto string_value(std::string custom_string){
+    custom_string = "New Assignment";
 }
 
-void mean_reference(const std::vector<int>& seq, float& mean_val){
-    // Zero copies
-    auto n = 0.0;
-    for(auto x: seq)
-        n += x;
-    mean_val = n/seq.size();
+void string_reference(std::string& custom_string){
+    custom_string = "New Assignment";
 }
 
 // ####################################################################################

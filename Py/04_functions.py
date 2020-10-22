@@ -3,7 +3,7 @@
 def say_hello():
     print("Hello world!")
 
-# Explicit type definition
+# Explicit type definition and return definition
 def say_hello(name: str) -> None:
     print(f"Hello {name}!")
 
@@ -19,11 +19,34 @@ def mean_builtin(seq):
 # Prototyping is not needed
 
 ####################################################################################
-# Call by reference/value example in python only with objects possible
+# Call by Object Reference/assignment example
+# https://www.geeksforgeeks.org/is-python-call-by-reference-or-call-by-value/
+
+# Call by value (immutable objects)  
+string = "Global String"
+  
+def string_value(custom_string):      
+    custom_string = "New Assignment"
+
+def string_reference(object_custom_string):      
+    object_custom_string.custom_string = "New Assignment"
+
+# Call by reference (mutable objects)
+class StringsType:
+    def __init__(self, passed_string):
+        self.custom_string = passed_string
+
+mystring = StringsType(string)
+print(mystring.custom_string)
+string_reference(mystring)
+print(mystring.custom_string)
+print(mystring) # <__main__.StringsType object at 0x7f7078cf2da0>
+
 
 ####################################################################################
 # Pass function address and run
 other_mean_name = mean_manual
+print(mean_manual) # <function mean_manual at 0x7f7078cfa0d0>
 
 def ForEach(values, func):
     for value in values:
@@ -38,6 +61,8 @@ def ForEach(values, func):
 def multiple_values(a, b):
     return a, b
 
+c, d = multiple_values(1, 2)
+
 ####################################################################################
 # Templates in python are implicit and builtin
 # Means calculation of float or int are already considered
@@ -51,7 +76,6 @@ mean = lambda seq: sum(seq) / len(seq)
 def main():
     rvec = [1, 2, 3, 4, 5]
     print(mean_manual(rvec))
-    c, d = multiple_values(1, 2)
 
 if __name__=="__main__":
     main()
