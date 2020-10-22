@@ -6,26 +6,26 @@
 # int/float
 a = 42
 b = 42
-  
+
+# Returns the actual location  
+# where the variable is stored 
 print(id(a)) 
+
+# Returns the actual location  
+# where the variable is stored 
 print(id(b)) 
+
+# Returns true if both the variables 
+# are stored in same location 
 print(a is b) # True
 
 ####################################################################################
 # Strings
 a = "first"
 b = "first" 
-  
-# Returns the actual location  
-# where the variable is stored 
+
 print(id(a)) 
-  
-# Returns the actual location  
-# where the variable is stored 
 print(id(b)) 
-  
-# Returns true if both the variables 
-# are stored in same location 
 print(a is b) # True
 
 ####################################################################################
@@ -38,8 +38,8 @@ print(id(b))
 print(a is b) # False
 
 ####################################################################################
-# Tuples are mutable
-a = (10, 20, 30)
+# Tuples are mutable and unique
+a = (10, 20, 30, 30) # == (10, 20, 30)
 b = (10, 20, 30) 
   
 print(id(a))   
@@ -56,7 +56,8 @@ print(id(b))
 print(a is b) # False
 
 ####################################################################################
-# To make python code faster use ctypes
+# To make python code faster use static typed Cython (used by numpy)
+# Python by C-like static typing *.pyx
 
 ####################################################################################
 # Operators + - * / % ** //
@@ -65,7 +66,7 @@ print(a is b) # False
 
 # Assignment Operators = += -= *= /= %= **= //=
 
-# Logical Operators and or not
+# Logical Operators and (&&) or (||) not (!)
 
 # Memberships Operators in not in
 
