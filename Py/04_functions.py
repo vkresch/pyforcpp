@@ -72,6 +72,17 @@ c, d = multiple_values(1, 2)
 mean = lambda seq: sum(seq) / len(seq)
 
 ####################################################################################
+# yield statement generate a Generator (yield does not break out of function like return)
+def simple_generator_function():
+    for i in range(3):
+        yield i
+
+generator = simple_generator_function()
+# iterate over generator (efficient)
+for g in generator:
+    print(g) # Generates element and deletes it
+
+####################################################################################
 # main function
 def main():
     rvec = [1, 2, 3, 4, 5]
