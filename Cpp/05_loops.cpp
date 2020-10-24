@@ -9,6 +9,8 @@ int main(){
     while(j < 3){
         std::cout << array[j] << std::endl;
         j++;
+        continue;
+        std::cout << "Gets never executed!!" << std::endl;
     }
     std::cout << "----" << std::endl;
 
@@ -16,6 +18,7 @@ int main(){
     // Iterate an array in a for loop
     for(int i=0; i<3; i++){
         std::cout << array[i] << std::endl;
+        break; // break out of the loop
     }
     std::cout << "----" << std::endl;
 

@@ -5,6 +5,8 @@ j = 0
 while j < 3:
     print(array[j])
     j += 1
+    continue
+    print("Gets never executed!!")
 print("----")
 
 ####################################################################################
@@ -12,6 +14,7 @@ print("----")
 # Non pythonic way
 for i in range(0, len(array)):
     print(array[i])
+    break # break out of the loop
 print("----")
 
 # iterate over range

@@ -5,6 +5,7 @@ print("Hello World")
 ####################################################################################
 # Proper way to run script (inspired by C++)
 # No code execution when importing functions
+# Python use indentation and new lines
 def main():
     print("Hello World")
 
@@ -20,6 +21,3 @@ def main(argv):
 
 if __name__ == "__main__":
     main(sys.argv)
-
-
-
