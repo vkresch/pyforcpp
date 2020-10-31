@@ -179,6 +179,7 @@ class Motor():
 
     def __init__(self):
         self.increment()
+        self.rpm = 1000
 
     def start(self):
         print("Brrrrrrrrrrrr!")
@@ -195,6 +196,13 @@ class Motor():
     def info():
         print("This is a motor class!")
 
+    @property
+    def rpm_meth(self):
+        if self.rpm > 100:
+            return self.rpm
+        else:
+            raise Exception(f"RPM {self.rpm} is not higher than 100.")
+
     def __del__(self):
         self.decrement()
 
@@ -206,6 +214,7 @@ bmw = Vehicle()
 bmw.motor.start()
 bmw.motor.info()
 print(bmw.motor.count)
+print(bmw.motor.rpm_meth, "rpm") # Access like a property with error handling
 
 # del bmw
 
