@@ -26,3 +26,6 @@
 ###################################################################################
 # Timing functions decoraters or other tools interesting
 # Benchmarking
+
+###################################################################################
+# Linting / Formatting and Black

@@ -20,4 +20,4 @@ int main(int argc, char* argv[]){
     win.show();
     return app.exec();
 }
-// $ qmake-qt4 && make && ./12_gui_qt
+// $ qmake && make && ./12_gui_qt

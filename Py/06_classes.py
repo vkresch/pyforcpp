@@ -14,6 +14,8 @@ class Car:
     def accelerate(self, value):
         self.acceleration += value
 
+    # Dunder / Magic method which can be overwritten like __init__
+    # https://docs.python.org/3/reference/datamodel.html
     def __del__(self):
         print('Destructor called, Car deleted.')
 
