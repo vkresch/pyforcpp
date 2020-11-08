@@ -39,7 +39,7 @@ class StringsType:
 mystring = StringsType(string)
 print(mystring.custom_string)
 string_reference(mystring)
-print(mystring.custom_string)
+print(mystring.custom_string) # "New Assignment"
 print(mystring) # <__main__.StringsType object at 0x7f7078cf2da0>
 
 
@@ -54,7 +54,11 @@ def ForEach(values, func):
 
 
 ####################################################################################
-# Python decorators
+# Python decorators (-> see 06_classes file)
+
+####################################################################################
+# Templates in python are implicit and builtin
+# Means calculation of float or int are already considered
 
 ####################################################################################
 # Return multiple values
@@ -62,10 +66,6 @@ def multiple_values(a, b):
     return a, b
 
 c, d = multiple_values(1, 2)
-
-####################################################################################
-# Templates in python are implicit and builtin
-# Means calculation of float or int are already considered
 
 ####################################################################################
 # Lambda functions
@@ -78,7 +78,10 @@ def simple_generator_function():
         yield i
 
 generator = simple_generator_function()
-# iterate over generator (efficient)
+print(generator) # <generator object simple_generator_function at 0x7fe0995fccf0>
+# Iterate over generator (efficient)
+# Iterators are list, tuples, ...
+# Difference between iterator and generator is that generator frees memory on runtime
 for g in generator:
     print(g) # Generates element and deletes it
 

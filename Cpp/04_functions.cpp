@@ -4,11 +4,11 @@
 // ####################################################################################
 // # Simple function definiton
 void say_hello(){
-    std::cout << 
+    std::cout << "Hello world!" << std::endl;
+}
 
 void say_hello(std::string& name){
     std::cout << "Hello " << name << std::endl;
-}"Hello world!" << std::endl;
 }
 
 auto mean_manual(const std::vector<int>& seq){

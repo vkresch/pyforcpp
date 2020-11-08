@@ -7,7 +7,7 @@ print("Hello World")
 # No code execution when importing functions
 # Python use indentation and new lines
 def main():
-    print("Hello World")
+    print("Hello World 2")
 
 if __name__ == "__main__":
     main()

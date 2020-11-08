@@ -9,6 +9,7 @@ int main(){
     int b = 42;
     std::cout << "Address a: " << &a << std::endl;
     std::cout << "Address b: " << &b << std::endl;
+    std::cout << ("---------------") << std::endl;
 
     // ####################################################################################
     // String address
@@ -16,6 +17,7 @@ int main(){
     std::string d = "first";
     std::cout << "Address c: " << &c << std::endl;
     std::cout << "Address d: " << &d << std::endl;
+    std::cout << ("---------------") << std::endl;
 
     // ####################################################################################
     // Array or Vectors
@@ -23,6 +25,7 @@ int main(){
     int array2[3] = {10, 20, 30};
     std::cout << "Address array1: " << array1 << std::endl;
     std::cout << "Address array2: " << array2 << std::endl;
+    std::cout << ("---------------") << std::endl;
 
     // ####################################################################################
     // Tuples
@@ -33,6 +36,7 @@ int main(){
     std::cout << "The values of tuple_a are: "; 
     std::cout << std::get<0>(tuple_a) << ", " << std::get<1>(tuple_a); 
     std::cout << ", " << std::get<2>(tuple_a) << std::endl; 
+    std::cout << ("---------------") << std::endl;
 
     // ####################################################################################
     // Map
@@ -47,6 +51,8 @@ int main(){
         std::cout << it->first << ": "<< it->second << std::endl;
         it++;
     }
+
+    std::cout << ("---------------") << std::endl;
 
     // And so on vectors and other containers
     // Vectors are more similar to python list since it has same kind of methods append push_back

@@ -12,12 +12,13 @@ print("----")
 ####################################################################################
 # for loop
 # Non pythonic way
+# iterate over range
 for i in range(0, len(array)):
     print(array[i])
     break # break out of the loop
 print("----")
 
-# iterate over range
+# iterate over elements
 for el in array:
     print(el)
 print("----")
@@ -27,8 +28,8 @@ for idx, el in enumerate(array):
 print("----")
 
 # iterate over dictionary
-dic = {0: "zero", 1: "one", 2: "two"}
-for key, value in dic.items():
+dictionary = {0: "zero", 1: "one", 2: "two"}
+for key, value in dictionary.items():
     print(key, ":", value)
 print("----")
 
@@ -84,9 +85,9 @@ print("----")
 
 # Dictionary comprehension
 example_dict = {1: "A", 2: "B", 3: "C", 4: "D"}
-even_list_comprehension = {key:el for key, el in example_dict.items() if key % 2 == 0}
-print(even_list_comprehension)
+even_dict_comprehension = {key:el for key, el in example_dict.items() if key % 2 == 0}
+print(even_dict_comprehension)
 print("----")
 
 ####################################################################################
-# Improve performance of loops via ctypes (Outlook pybind11)
+# Improve performance of loops via Cython or pybind11

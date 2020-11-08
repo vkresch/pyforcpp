@@ -23,7 +23,7 @@ car = Car("BMW")
 print("Acceleration:", car.acceleration)
 car.accelerate(20)
 print("Acceleration:", car.acceleration)
-del car 
+del car
 print("-----")
 
 ####################################################################################
@@ -32,27 +32,28 @@ print("-----")
 
 class Person(object):
     def __init__(self, name, age): #constructor
-        self.__name = name
+        self._name = name
         #data members/ attributes
-        self.__age = age
-        print(f"Created person {self.__name}!")
+        self._age = age
+        print(f"Created person {self._name}!")
 
     def get_person(self):
         # member function
-        return f"<Person ({self.__name}, {self.__age})>"
-        # return "<Person (%s, %s)>" % (self.__name, self.__age)
+        return f"<Person ({self._name}, {self._age})>"
+        # return "<Person (%s, %s)>" % (self._name, self._age)
 
     def greet(self):
         print("Hi I am a normal person!")
 
     def __del__(self):
-        print(f"Killing person {self.__name} {self.__age}!")
+        print(f"Killing person {self._name} {self._age}!")
 
 john = Person("John", 32)
  # john is an object of type Person
 print("Type of Object:", type(john), "Memory Address:", id(john))
 print(john.get_person())
-# print(john.__name) # throws an error because __name is private
+print(john._name) # does not throw an error because _name is protected
+# this is just a convention
 del john
 print("-----")
 
@@ -70,25 +71,26 @@ print("-----")
 
 class Student(Person):
     def __init__(self, name, age, idnumber):
-        self.__idnumber = idnumber 
-        self.__name = name # If private you need to specify it again
-        self.__age = age
-        print(f"Created student {self.__name}!")
         Person.__init__(self, name, age)
+        self.__idnumber = idnumber 
+        # self.__name = name # If private you need to specify it again
+        # self.__age = age
+        print(f"Created student {self._name}!")
 
     def get_student(self):
-        return f"<Student ({self.__name}, {self.__age}, {self.__idnumber})>"
+        return f"<Student ({self._name}, {self._age}, {self.__idnumber})>"
 
     def greet(self):
         print("Hi I am a student!")
 
     def __del__(self):
         super().__del__()
-        print(f"Killing student {self.__name} {self.__age} {self.__idnumber}!")
+        print(f"Killing student {self._name} {self._age} {self.__idnumber}!")
 
 student_jonny = Student("Jonny", 45, 123456)
 print(student_jonny.get_person())
 print(student_jonny.get_student())
+# print(student_jonny.__idnumber) # throws an error
 del student_jonny
 print("-----")
 
